@@ -1,9 +1,11 @@
 '''
-A DOS attack or Distrubuted Denail of Service attack is used
+A DOS attack or Denail of Service attack is used
 to deny access to a server or host that provides some sort of service.
 This is done by sending a large amount of packets to the server or host
 overloading it and making it unable to send or recieve packets to/from the 
-actual users.
+actual users. (A DDOS or Distrubuted Denail of Service, is the same as a DOS
+instead muilitple hosts are doing DOS's, usually a botnet controlled by a 
+threat actor).
 
 In this demostration the client will time how long it takes
 to send and recieve a message from the server. Notice how it only
