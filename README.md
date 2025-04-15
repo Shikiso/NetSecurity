@@ -35,3 +35,14 @@ IP spoofing is when an attacker changes the ip header in a packet to
 so that the packet looks like it's comming from a different device.
 This is commonly used in SYN DOS attacks.
 (Use wireshark to see the packets with the altered source IP)
+
+### MAC
+MAC spoofing is the same principle of IP spoofing where the attacker
+changes their MAC address to look like a different device. However it
+is done differently. For MAC spoofing you'll need to manipulate the ARP
+table in devices. This isn't so hard as all devices will send out ARP requests
+trying to find a MAC address for a host using a IP address. To spoof your MAC
+address simply send out ARP response packets to the target that say you are
+a different device for exmaple the default gateway.
+I recommend having a look at **https://github.com/davidlares/arp-spoofing/tree/master**
+since this helped me with trying to create the script.

