@@ -34,3 +34,4 @@ server or host entirely so that it cannot be used.
 IP spoofing is when an attacker changes the ip header in a packet to
 so that the packet looks like it's comming from a different device.
 This is commonly used in SYN DOS attacks.
+(Use wireshark to see the packets with the altered source IP)

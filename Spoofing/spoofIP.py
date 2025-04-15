@@ -1,3 +1,8 @@
+'''
+When testing this out use wireshark to see the packets and watch how the IP
+is what you set he SRC_IP to be.
+'''
+
 from scapy.all import IP, TCP, send
 import random
 
