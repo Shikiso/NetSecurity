@@ -2,7 +2,7 @@
 ## I AM NOT RESPONSIBLE FOR ANYONE WHO USES THE CONTENT MALICIOUSLY THIS IS PURELY FOR EDUCATION!!!
 
 ## Password Cracking
-### Brute Foce
+### Brute Force
 Brute force attacks use the computers resources to test
 the users password against every combination. These attacks can
 take very long if the password is long and complicated.
