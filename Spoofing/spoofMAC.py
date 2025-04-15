@@ -24,9 +24,6 @@ interface = 'wlan0'
 # Device you want to be ip address
 device_ip = '192.168.0.188'
 
-# Getting device information
-device_ip = conf.route.route("0.0.0.0")[1]
-
 # The device you want to make think you are a different device
 # To make all devices on a network think you are a different device
 # you need to loop through all hosts and send the ARP response packet
