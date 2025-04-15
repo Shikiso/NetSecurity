@@ -46,3 +46,11 @@ address simply send out ARP response packets to the target that say you are
 a different device for exmaple the default gateway.
 I recommend having a look at **https://github.com/davidlares/arp-spoofing/tree/master**
 since this helped me with trying to create the script.
+
+## Sniffers
+Sniffers are tools or devices that sniff packets in the network.
+They can be used to see who is sending what where with what information.
+Wireshark is problery the most popular and used. Sniffers can be used in
+Man-In-The-Middle attacks if something like arp spoofing (mac spoofing) is used along side it.
+I haven't made anything for sniffers since I think wireshark is good enough
+to use and there is plenty of information online about how to use it.
