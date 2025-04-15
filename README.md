@@ -28,3 +28,9 @@ but multiple machines (usually a botnet) attack the host or server.
 This attack involves sending a large amount of packets to the server or host
 to increase the time it takes to interact with clients or crashing the
 server or host entirely so that it cannot be used.
+
+## Spoofing
+### IP
+IP spoofing is when an attacker changes the ip header in a packet to
+so that the packet looks like it's comming from a different device.
+This is commonly used in SYN DOS attacks.
