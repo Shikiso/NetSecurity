@@ -54,3 +54,13 @@ Wireshark is problery the most popular and used. Sniffers can be used in
 Man-In-The-Middle attacks if something like arp spoofing (mac spoofing) is used along side it.
 I haven't made anything for sniffers since I think wireshark is good enough
 to use and there is plenty of information online about how to use it.
+
+## Buffer Overflow
+A buffer overflow is when an attacker overflows the stack in order to call a function or get a shell.
+This is done by supplying more data than there is memory. For example if you have a variable called name
+which holds 16 bytes, and 32 bytes are stored in the variable. The 16 bytes that cannot be stored will
+overwrite memory in the stack. It's like pouring 1L of water into a 600ml cup. This attack can be
+done over a network or on a program on your machine. For this example I used a CTF that runs
+on your machine (needs to be linux). Intructions to follow along are in the folder, I'm not going over
+assembly, GDB or how anything works just the process of how to complete the CTF. Resources to
+learn these are supplied though.
