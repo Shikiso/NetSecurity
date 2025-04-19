@@ -62,5 +62,8 @@ which holds 16 bytes, and 32 bytes are stored in the variable. The 16 bytes that
 overwrite memory in the stack. It's like pouring 1L of water into a 600ml cup. This attack can be
 done over a network or on a program on your machine. For this example I used a CTF that runs
 on your machine (needs to be linux). Intructions to follow along are in the folder, I'm not going over
-assembly, GDB or how anything works just the process of how to complete the CTF. Resources to
-learn these are supplied though.
+assembly, GDB or how anything works just the process of how to complete the CTF. To learn I recommend
+these:
+**https://www.youtube.com/watch?v=6sUd3AA7Q50&t=1199s&ab_channel=crow**
+**https://insecure.org/stf/smashstack.html**
+**https://www.youtube.com/watch?v=-iRG9_zFRC4&list=PL1H1sBF1VAKUBfdObXv_MeS4s3n8qwgeU&ab_channel=JohnHammond**
