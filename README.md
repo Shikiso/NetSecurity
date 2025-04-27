@@ -1,5 +1,5 @@
 # NetSecurity
-## I AM NOT RESPONSIBLE FOR ANYONE WHO USES THE CONTENT MALICIOUSLY THIS IS PURELY FOR EDUCATION!!!
+This is just a reposisitory to store what I learn, feel free to correct any mistakes.
 
 ## Password Cracking
 ### Brute Force
