@@ -67,3 +67,16 @@ these:
 **https://www.youtube.com/watch?v=6sUd3AA7Q50&t=1199s&ab_channel=crow**
 **https://insecure.org/stf/smashstack.html**
 **https://www.youtube.com/watch?v=-iRG9_zFRC4&list=PL1H1sBF1VAKUBfdObXv_MeS4s3n8qwgeU&ab_channel=JohnHammond**
+
+## Cryptography
+Cryptography is used to scramble characters in a message so that others cannot understand what is being said.
+I only create three simple cryptography alorithms since it's not what I'm focusing on
+at the moment. Substitution simply substitutes a letter for one three ascii values down.
+For example A becomes D.
+Transposition is similar to substitution however it uses a pattern instead.
+So every 8 bytes of a text the characters positions are swapped.
+XOR converts the text into binary which is xored with the keys binary and the result
+is sent to the reciever.
+Character: 100101
+Key:       010010
+Result:    110111
